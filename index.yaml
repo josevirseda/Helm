@@ -3,12 +3,12 @@ entries:
   chartexample:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-02-08T14:53:40.302189143+01:00"
+    created: "2022-03-10T15:58:07.354609738+01:00"
     description: A Helm chart for Kubernetes
-    digest: 1a95faa4d1be8b29146b12477673469ef8c9921cfd99796e1861c9be17cd313a
+    digest: 757094e9d3b96a01f6ef34a6e263ba73ee94bcc64f3ff79c0fa1db0550ad2526
     name: chartexample
     type: application
     urls:
     - https://josevirseda.github.io/Helm/chartexample-0.1.0.tgz
     version: 0.1.0
-generated: "2022-02-08T14:53:40.301324159+01:00"
+generated: "2022-03-10T15:58:07.354030175+01:00"
