@@ -1,38 +1,40 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ include "accessvnf.fullname" . }}
+  name: {{ include "extnet.fullname" . }}
   labels:
-    {{- include "accessvnf.labels" . | nindent 4 }}
+    {{- include "extnet.labels" . | nindent 4 }}
 spec:
   {{- if not .Values.autoscaling.enabled }}
   replicas: {{ .Values.replicaCount }}
   {{- end }}
   selector:
     matchLabels:
-      {{- include "accessvnf.selectorLabels" . | nindent 6 }}
+      {{- include "extnet.selectorLabels" . | nindent 6 }}
   template:
     metadata:
       {{- with .Values.podAnnotations }}
       annotations:
-        k8s.v1.cni.cncf.io/networks: ovs-confaccesnet1
+        k8s.v1.cni.cncf.io/networks: extnet1
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
       labels:
-        {{- include "accessvnf.selectorLabels" . | nindent 8 }}
+        {{- include "extnet.selectorLabels" . | nindent 8 }}
     spec:
       {{- with .Values.imagePullSecrets }}
       imagePullSecrets:
         {{- toYaml . | nindent 8 }}
       {{- end }}
-      serviceAccountName: {{ include "accessvnf.serviceAccountName" . }}
+      serviceAccountName: {{ include "extnet.serviceAccountName" . }}
       securityContext:
         privileged: true
+        {{- toYaml .Values.podSecurityContext | nindent 8 }}
       containers:
         - name: {{ .Chart.Name }}
           securityContext:
             {{- toYaml .Values.securityContext | nindent 12 }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
-          command: ["/bin/sleep", "3650d", "ip address add 10.255.0.1/24 dev net1; tail -f /dev/null"]
           ports:
             - name: http
               containerPort: 80
