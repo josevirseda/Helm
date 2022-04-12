@@ -31,9 +31,8 @@ spec:
       containers:
         - name: {{ .Chart.Name }}
           securityContext:
-            capabilities:
-              add: ["NET_ADMIN", "SYS_TIME"]
-            {{- toYaml .Values.securityContext | nindent 12 }}
+            privileged: true
+            allowPrivilegeEscalation: true
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           command: ["/bin/sleep", "3650d"]
