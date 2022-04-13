@@ -3,7 +3,7 @@ entries:
   accessnet:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-04-13T15:28:28.767301381+02:00"
+    created: "2022-04-13T15:50:09.872031631+02:00"
     description: A Helm chart for Kubernetes
     digest: 592ca1430f8819e7221f53f2a1ecfe80b62be6eaebca7a437527b32129169689
     name: accessnet
@@ -14,9 +14,9 @@ entries:
   chartexample:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-04-13T15:28:28.76769928+02:00"
+    created: "2022-04-13T15:50:09.872450939+02:00"
     description: A Helm chart for Kubernetes
-    digest: 3c73e2496c31883693c1b928f9b1c37d4c4c6663c2e9ba140b19cc1a518159ae
+    digest: 3acda2b7deb15e692f45bcfd7aff67b754bf056e4ee48bcd0270b5c947f24a45
     name: chartexample
     type: application
     urls:
@@ -25,7 +25,7 @@ entries:
   extnet:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-04-13T15:28:28.768170394+02:00"
+    created: "2022-04-13T15:50:09.872945093+02:00"
     description: A Helm chart for Kubernetes
     digest: 1308f99d93aaf3dfd3e8b89394eed8992c3e0e0d329dc29245bb2fc8a45c9ecc
     name: extnet
@@ -33,4 +33,4 @@ entries:
     urls:
     - https://josevirseda.github.io/Helm/extnet-0.1.0.tgz
     version: 0.1.0
-generated: "2022-04-13T15:28:28.766683513+02:00"
+generated: "2022-04-13T15:50:09.871370452+02:00"
