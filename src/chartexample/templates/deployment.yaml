@@ -33,6 +33,7 @@ spec:
           securityContext:
             capabilities:
               add: ["NET_ADMIN"]
+            privileged: true
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           command: ["/bin/sleep", "3650d"]
