@@ -15,7 +15,7 @@ spec:
     metadata:
       {{- with .Values.podAnnotations }}
       annotations:
-        k8s.v1.cni.cncf.io/networks: AccessNet1
+        k8s.v1.cni.cncf.io/networks: accessnet1
       labels:
         {{- include "chartexample.selectorLabels" . | nindent 8 }}
     spec:
