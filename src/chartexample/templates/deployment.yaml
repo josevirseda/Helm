@@ -15,9 +15,7 @@ spec:
     metadata:
       {{- with .Values.podAnnotations }}
       annotations:
-        k8s.v1.cni.cncf.io/networks: accessnet1
-        {{- toYaml . | nindent 8 }}
-      {{- end }}
+        k8s.v1.cni.cncf.io/networks: AccessNet1
       labels:
         {{- include "chartexample.selectorLabels" . | nindent 8 }}
     spec:
@@ -36,7 +34,7 @@ spec:
             privileged: true
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
-          command: ["/bin/sleep", "3650d"]
+          command: ["/bin/sleep", "3650d", "ip address add 10.255.0.1/24 dev net1"]
           ports:
             - name: http
               containerPort: 80
