@@ -2,14 +2,14 @@
 apiVersion: autoscaling/v2beta1
 kind: HorizontalPodAutoscaler
 metadata:
-  name: {{ include "accessnet.fullname" . }}
+  name: {{ include "AccessNet1.fullname" . }}
   labels:
-    {{- include "accessnet.labels" . | nindent 4 }}
+    {{- include "AccessNet1.labels" . | nindent 4 }}
 spec:
   scaleTargetRef:
     apiVersion: apps/v1
     kind: Deployment
-    name: {{ include "accessnet.fullname" . }}
+    name: {{ include "AccessNet1.fullname" . }}
   minReplicas: {{ .Values.autoscaling.minReplicas }}
   maxReplicas: {{ .Values.autoscaling.maxReplicas }}
   metrics:
