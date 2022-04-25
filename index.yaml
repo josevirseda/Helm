@@ -3,7 +3,7 @@ entries:
   AccessNet1:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-04-25T23:47:57.026135177+02:00"
+    created: "2022-04-25T23:54:49.923594107+02:00"
     description: A Helm chart for Kubernetes
     digest: 884fbcef99ecb5ccba7d753a1571b69aea3f4b37b58720d44957427b1fce1287
     name: AccessNet1
@@ -11,4 +11,15 @@ entries:
     urls:
     - https://josevirseda.github.io/Helm/AccessNet1-0.1.0.tgz
     version: 0.1.0
-generated: "2022-04-25T23:47:57.025498026+02:00"
+  chartexample:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2022-04-25T23:54:49.924293809+02:00"
+    description: A Helm chart for Kubernetes
+    digest: da6d43f8e3b9e8b51a4299e6c43f98189265aea41f50b308caf83b18b152ae30
+    name: chartexample
+    type: application
+    urls:
+    - https://josevirseda.github.io/Helm/chartexample-0.1.0.tgz
+    version: 0.1.0
+generated: "2022-04-25T23:54:49.910823278+02:00"
