@@ -1,39 +1,36 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ include "AccessNet1.fullname" . }}
+  name: {{ include "ejemplo.fullname" . }}
   labels:
-    {{- include "AccessNet1.labels" . | nindent 4 }}
+    {{- include "ejemplo.labels" . | nindent 4 }}
 spec:
   {{- if not .Values.autoscaling.enabled }}
   replicas: {{ .Values.replicaCount }}
   {{- end }}
   selector:
     matchLabels:
-      {{- include "AccessNet1.selectorLabels" . | nindent 6 }}
+      {{- include "ejemplo.selectorLabels" . | nindent 6 }}
   template:
     metadata:
       {{- with .Values.podAnnotations }}
       annotations:
-        k8s.v1.cni.cncf.io/networks: accessnet1
         {{- toYaml . | nindent 8 }}
       {{- end }}
       labels:
-        {{- include "AccessNet1.selectorLabels" . | nindent 8 }}
+        {{- include "ejemplo.selectorLabels" . | nindent 8 }}
     spec:
       {{- with .Values.imagePullSecrets }}
       imagePullSecrets:
         {{- toYaml . | nindent 8 }}
       {{- end }}
-      serviceAccountName: {{ include "AccessNet1.serviceAccountName" . }}
+      serviceAccountName: {{ include "ejemplo.serviceAccountName" . }}
       securityContext:
         {{- toYaml .Values.podSecurityContext | nindent 8 }}
       containers:
         - name: {{ .Chart.Name }}
           securityContext:
-            capabilities:
-              add: ["NET_ADMIN"]
-            privileged: true
+            {{- toYaml .Values.securityContext | nindent 12 }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           command: ["/bin/sleep", "3650d"]
