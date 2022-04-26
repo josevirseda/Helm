@@ -3,7 +3,7 @@ entries:
   ejemplonormal:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-04-26T23:20:41.485746676+02:00"
+    created: "2022-04-26T23:28:07.550928722+02:00"
     description: A Helm chart for Kubernetes
     digest: a8d9d163674ed31e53307f73e60651d36aa1a7509573615fe43dab61138f0469
     name: ejemplonormal
@@ -14,12 +14,12 @@ entries:
   ejemploubuntu:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-04-26T23:20:41.486165549+02:00"
+    created: "2022-04-26T23:28:07.551406599+02:00"
     description: A Helm chart for Kubernetes
-    digest: 8503e593892df42074064df431ab03dba5c935f12b9e111359c9b6d5906968b1
+    digest: aa7134fd43ae2771edaabbc43b702b41afec265981dd262b36cba318788d1a4c
     name: ejemploubuntu
     type: application
     urls:
     - https://josevirseda.github.io/Helm/ejemploubuntu-0.1.0.tgz
     version: 0.1.0
-generated: "2022-04-26T23:20:41.484977032+02:00"
+generated: "2022-04-26T23:28:07.550367+02:00"
