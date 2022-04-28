@@ -1,9 +1,20 @@
 apiVersion: v1
 entries:
+  access:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2022-04-28T17:09:55.248644763+02:00"
+    description: A Helm chart for Kubernetes
+    digest: a8d5e8823988d257f3005bf1d293a60c44f689b59ab6f205adff2c083c4e2da7
+    name: access
+    type: application
+    urls:
+    - https://josevirseda.github.io/Helm/access-0.1.0.tgz
+    version: 0.1.0
   ejemplonormal:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-04-26T23:58:09.636960596+02:00"
+    created: "2022-04-28T17:09:55.249292315+02:00"
     description: A Helm chart for Kubernetes
     digest: a8d9d163674ed31e53307f73e60651d36aa1a7509573615fe43dab61138f0469
     name: ejemplonormal
@@ -14,12 +25,34 @@ entries:
   ejemploubuntu:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-04-26T23:58:09.63744339+02:00"
+    created: "2022-04-28T17:09:55.250043892+02:00"
     description: A Helm chart for Kubernetes
-    digest: b9577b04f8604deab8b4548dbc03f042450ca0a5765b7cc2a4436518aa0a5db7
+    digest: 000e569bdbcfd16f8a8d6c2e0655fc4d5af01b1d3818ad78cf51c473f5ea5034
     name: ejemploubuntu
     type: application
     urls:
     - https://josevirseda.github.io/Helm/ejemploubuntu-0.1.0.tgz
     version: 0.1.0
-generated: "2022-04-26T23:58:09.636062079+02:00"
+  ext:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2022-04-28T17:09:55.250859564+02:00"
+    description: A Helm chart for Kubernetes
+    digest: c41eabc7b1bca67786a9ee90f315914012bb8cd4a8776409fbbd1221ea850884
+    name: ext
+    type: application
+    urls:
+    - https://josevirseda.github.io/Helm/ext-0.1.0.tgz
+    version: 0.1.0
+  wan:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2022-04-28T17:09:55.251763559+02:00"
+    description: A Helm chart for Kubernetes
+    digest: c1a049e1c9d30f6d552984ca97bffea250ea00af47a3926dc8a5f996eb328bf9
+    name: wan
+    type: application
+    urls:
+    - https://josevirseda.github.io/Helm/wan-0.1.0.tgz
+    version: 0.1.0
+generated: "2022-04-28T17:09:55.247806454+02:00"
