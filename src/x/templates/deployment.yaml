@@ -1,45 +1,50 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ include "ejemploubuntu.fullname" . }}
+  name: {{ include "x.fullname" . }}
   labels:
-    {{- include "ejemploubuntu.labels" . | nindent 4 }}
+    {{- include "x.labels" . | nindent 4 }}
 spec:
   {{- if not .Values.autoscaling.enabled }}
   replicas: {{ .Values.replicaCount }}
   {{- end }}
   selector:
     matchLabels:
-      {{- include "ejemploubuntu.selectorLabels" . | nindent 6 }}
+      {{- include "x.selectorLabels" . | nindent 6 }}
   template:
     metadata:
       {{- with .Values.podAnnotations }}
       annotations:
-        k8s.v1.cni.cncf.io/networks: accessnet1
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
       labels:
-        {{- include "ejemploubuntu.selectorLabels" . | nindent 8 }}
+        {{- include "x.selectorLabels" . | nindent 8 }}
     spec:
       {{- with .Values.imagePullSecrets }}
       imagePullSecrets:
         {{- toYaml . | nindent 8 }}
       {{- end }}
-      serviceAccountName: {{ include "ejemploubuntu.serviceAccountName" . }}
+      serviceAccountName: {{ include "x.serviceAccountName" . }}
       securityContext:
         {{- toYaml .Values.podSecurityContext | nindent 8 }}
       containers:
         - name: {{ .Chart.Name }}
           securityContext:
-            capabilities:
-              add: ["NET_ADMIN"]
-            privileged: true
+            {{- toYaml .Values.securityContext | nindent 12 }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
-          command: ["sh", "-c", "ip address add 10.255.0.101/24 dev net1; tail -f /dev/null"]
+          ports:
+            - name: http
+              containerPort: 80
+              protocol: TCP
           livenessProbe:
-            exec:
-              command:
-	      - echo
-              - "alive"
+            httpGet:
+              path: /
+              port: http
+          readinessProbe:
+            httpGet:
+              path: /
+              port: http
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
       {{- with .Values.nodeSelector }}
