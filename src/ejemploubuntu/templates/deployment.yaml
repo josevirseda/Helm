@@ -36,8 +36,7 @@ spec:
             privileged: true
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
-          command: ["sh", "-c", "ip address add 10.255.0.101/24 dev net1; tail
-   -f /dev/null"]
+          command: ["sh", "-c", "ip address add 10.255.0.101/24 dev net1; tail -f /dev/null"]
           ports:
             - name: http
               containerPort: 80
