@@ -16,8 +16,6 @@ spec:
       {{- with .Values.podAnnotations }}
       annotations:
         k8s.v1.cni.cncf.io/networks: accessnet1
-        {{- toYaml . | nindent 8 }}
-      {{- end }}
       labels:
         {{- include "ejemploubuntu.selectorLabels" . | nindent 8 }}
     spec:
