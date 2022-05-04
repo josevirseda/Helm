@@ -35,7 +35,7 @@ spec:
             privileged: true
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
-          command: ["sh", "-c","service openvswitch-switch start", "ip address add 10.255.0.7/24 dev net1; tail -f /dev/null"]
+          command: ["sh", "-c","ip address add 10.255.0.7/24 dev net1; tail -f /dev/null"]
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
       {{- with .Values.nodeSelector }}
