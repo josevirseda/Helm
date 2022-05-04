@@ -5,10 +5,10 @@
 replicaCount: 1
 
 image:
-  repository: josevirseda/accessimage
+  repository: josevirseda/imagenknf
   pullPolicy: Always
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "latest1"
+  tag: "latest"
 
 imagePullSecrets: []
 nameOverride: ""
