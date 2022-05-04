@@ -16,7 +16,6 @@ spec:
       {{- with .Values.podAnnotations }}
       annotations:
         k8s.v1.cni.cncf.io/networks: accessnet1
-        {{- toYaml . | nindent 8 }}
       {{- end }}
       labels:
         {{- include "ejemploubuntu.selectorLabels" . | nindent 8 }}
@@ -36,11 +35,7 @@ spec:
             privileged: true
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
-          command: ["sh", "-c", "ip address add 10.255.0.101/24 dev net1; tail -f /dev/null"]
-          ports:
-            - name: http
-              containerPort: 80
-              protocol: TCP
+          command: ["sh", "-c", "ip address add 10.255.0.7/24 dev net1; tail -f /dev/null"]
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
       {{- with .Values.nodeSelector }}
