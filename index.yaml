@@ -3,7 +3,7 @@ entries:
   access:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-05-05T10:31:47.78664442+02:00"
+    created: "2022-05-05T22:18:03.402862479+02:00"
     description: A Helm chart for Kubernetes
     digest: a8d5e8823988d257f3005bf1d293a60c44f689b59ab6f205adff2c083c4e2da7
     name: access
@@ -14,7 +14,7 @@ entries:
   ejemplonormal:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-05-05T10:31:47.787254698+02:00"
+    created: "2022-05-05T22:18:03.404190617+02:00"
     description: A Helm chart for Kubernetes
     digest: a8d9d163674ed31e53307f73e60651d36aa1a7509573615fe43dab61138f0469
     name: ejemplonormal
@@ -25,7 +25,7 @@ entries:
   ejemploubuntu:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-05-05T10:31:47.795028691+02:00"
+    created: "2022-05-05T22:18:03.405147386+02:00"
     description: A Helm chart for Kubernetes
     digest: 56cc78301533f3778b24ac5ec759a9a03526fbeb927050ff664249a69bdc188b
     name: ejemploubuntu
@@ -33,10 +33,21 @@ entries:
     urls:
     - https://josevirseda.github.io/Helm/ejemploubuntu-0.1.0.tgz
     version: 0.1.0
+  ejemploubuntuextnet:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2022-05-05T22:18:03.406755829+02:00"
+    description: A Helm chart for Kubernetes
+    digest: 58be1c581b9803b2431123876c33f1f91ccd69fb24b55fa0129ef5e552f372e1
+    name: ejemploubuntuextnet
+    type: application
+    urls:
+    - https://josevirseda.github.io/Helm/ejemploubuntuextnet-0.1.0.tgz
+    version: 0.1.0
   ext:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-05-05T10:31:47.795710925+02:00"
+    created: "2022-05-05T22:18:03.40761903+02:00"
     description: A Helm chart for Kubernetes
     digest: c41eabc7b1bca67786a9ee90f315914012bb8cd4a8776409fbbd1221ea850884
     name: ext
@@ -47,7 +58,7 @@ entries:
   wan:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-05-05T10:31:47.796276768+02:00"
+    created: "2022-05-05T22:18:03.408395717+02:00"
     description: A Helm chart for Kubernetes
     digest: c1a049e1c9d30f6d552984ca97bffea250ea00af47a3926dc8a5f996eb328bf9
     name: wan
@@ -55,4 +66,4 @@ entries:
     urls:
     - https://josevirseda.github.io/Helm/wan-0.1.0.tgz
     version: 0.1.0
-generated: "2022-05-05T10:31:47.785827113+02:00"
+generated: "2022-05-05T22:18:03.401370255+02:00"

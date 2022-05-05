@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "ejemploubuntuextnet.fullname" . }}
+  labels:
+    {{- include "ejemploubuntuextnet.labels" . | nindent 4 }}
+spec:
+  type: {{ .Values.service.type }}
+  ports:
+    - port: {{ .Values.service.port }}
+      targetPort: http
+      protocol: TCP
+      name: http
+  selector:
+    {{- include "ejemploubuntuextnet.selectorLabels" . | nindent 4 }}
