@@ -3,7 +3,7 @@ entries:
   access:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-05-05T22:41:00.989997832+02:00"
+    created: "2022-05-05T22:43:34.345510106+02:00"
     description: A Helm chart for Kubernetes
     digest: a8d5e8823988d257f3005bf1d293a60c44f689b59ab6f205adff2c083c4e2da7
     name: access
@@ -14,7 +14,7 @@ entries:
   ejemplonormal:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-05-05T22:41:00.991003686+02:00"
+    created: "2022-05-05T22:43:34.346233199+02:00"
     description: A Helm chart for Kubernetes
     digest: a8d9d163674ed31e53307f73e60651d36aa1a7509573615fe43dab61138f0469
     name: ejemplonormal
@@ -25,7 +25,7 @@ entries:
   ejemploubuntu:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-05-05T22:41:00.991870857+02:00"
+    created: "2022-05-05T22:43:34.347009669+02:00"
     description: A Helm chart for Kubernetes
     digest: 56cc78301533f3778b24ac5ec759a9a03526fbeb927050ff664249a69bdc188b
     name: ejemploubuntu
@@ -36,9 +36,9 @@ entries:
   ejemploubuntuextnet:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-05-05T22:41:00.992709788+02:00"
+    created: "2022-05-05T22:43:34.347738404+02:00"
     description: A Helm chart for Kubernetes
-    digest: 9a700b75d2e1a0509cf4d8b1b500173cdd2b894bbe96d0037005959328384d6a
+    digest: d02c19e2e8bf5853a38afd312dae17d680197b656ca8493ffb6d70367c998dc7
     name: ejemploubuntuextnet
     type: application
     urls:
@@ -47,7 +47,7 @@ entries:
   ext:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-05-05T22:41:00.993801022+02:00"
+    created: "2022-05-05T22:43:34.348453874+02:00"
     description: A Helm chart for Kubernetes
     digest: c41eabc7b1bca67786a9ee90f315914012bb8cd4a8776409fbbd1221ea850884
     name: ext
@@ -58,7 +58,7 @@ entries:
   wan:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-05-05T22:41:00.994650883+02:00"
+    created: "2022-05-05T22:43:34.349173654+02:00"
     description: A Helm chart for Kubernetes
     digest: c1a049e1c9d30f6d552984ca97bffea250ea00af47a3926dc8a5f996eb328bf9
     name: wan
@@ -66,4 +66,4 @@ entries:
     urls:
     - https://josevirseda.github.io/Helm/wan-0.1.0.tgz
     version: 0.1.0
-generated: "2022-05-05T22:41:00.988659732+02:00"
+generated: "2022-05-05T22:43:34.344461184+02:00"
