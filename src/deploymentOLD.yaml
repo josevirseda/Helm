@@ -13,8 +13,10 @@ spec:
       {{- include "ejemploubuntu.selectorLabels" . | nindent 6 }}
   template:
     metadata:
+      {{- with .Values.podAnnotations }}
       annotations:
         k8s.v1.cni.cncf.io/networks: accessnet1
+      {{- end }}
       labels:
         {{- include "ejemploubuntu.selectorLabels" . | nindent 8 }}
     spec:
