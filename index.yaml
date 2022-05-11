@@ -3,9 +3,9 @@ entries:
   ejemploubuntu:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-05-10T23:04:49.143413281+02:00"
+    created: "2022-05-11T22:10:53.99814388+02:00"
     description: A Helm chart for Kubernetes
-    digest: ceeba9a941f253271eadf2b3db1e2eea186b756f33c2bb997c06a82377a01eed
+    digest: 79bb8d966da1769d108d0e147f0d5fe6ffbff8eb82fbcc64d4ffba6bd1433a8a
     name: ejemploubuntu
     type: application
     urls:
@@ -14,7 +14,7 @@ entries:
   extnet:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-05-10T23:04:49.144109973+02:00"
+    created: "2022-05-11T22:10:53.999629023+02:00"
     description: A Helm chart for Kubernetes
     digest: c12a0d7ae5f94e0d298d78ef6f8dd215ad0da2f411173b98894f9d51d89f1b38
     name: extnet
@@ -22,4 +22,4 @@ entries:
     urls:
     - https://josevirseda.github.io/Helm/extnet-0.1.0.tgz
     version: 0.1.0
-generated: "2022-05-10T23:04:49.142309917+02:00"
+generated: "2022-05-11T22:10:53.996885588+02:00"
