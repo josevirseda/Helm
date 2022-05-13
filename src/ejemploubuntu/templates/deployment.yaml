@@ -14,7 +14,7 @@ spec:
   template:
     metadata:
       annotations:
-        k8s.v1.cni.cncf.io/networks: accessnet1
+        k8s.v1.cni.cncf.io/networks: accessnet1,bridgeosm
       labels:
         {{- include "ejemploubuntu.selectorLabels" . | nindent 8 }}
     spec:
