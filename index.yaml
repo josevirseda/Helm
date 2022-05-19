@@ -1,25 +1,36 @@
 apiVersion: v1
 entries:
-  ejemploubuntu:
+  accesschart:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-05-19T09:53:34.901804681+02:00"
+    created: "2022-05-19T15:01:29.897216835+02:00"
     description: A Helm chart for Kubernetes
-    digest: 51629034ff85138ef032ae4d1374876347a39e98cb6e31ea9ef7c288609d7632
-    name: ejemploubuntu
+    digest: db4a039bfb5f2faa1e8ee21d47714247d09bdd149452161aa67a2cc58ae661b4
+    name: accesschart
     type: application
     urls:
-    - https://josevirseda.github.io/Helm/ejemploubuntu-0.1.0.tgz
+    - https://josevirseda.github.io/Helm/accesschart-0.1.0.tgz
     version: 0.1.0
-  extnet:
+  cpechart:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-05-19T09:53:34.902945913+02:00"
+    created: "2022-05-19T15:01:29.897910145+02:00"
     description: A Helm chart for Kubernetes
-    digest: fe275c75df932a4131cb5ac2b3f8931ed8da8243841f7ca6780ad1cb27662456
-    name: extnet
+    digest: 9df361c7ac900caff91dfbe86d6e8fde8da3811cf4b24f66d986b3b1111a50c6
+    name: cpechart
     type: application
     urls:
-    - https://josevirseda.github.io/Helm/extnet-0.1.0.tgz
+    - https://josevirseda.github.io/Helm/cpechart-0.1.0.tgz
     version: 0.1.0
-generated: "2022-05-19T09:53:34.900630011+02:00"
+  wanchart:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2022-05-19T15:01:29.898661851+02:00"
+    description: A Helm chart for Kubernetes
+    digest: 56ed00418599940a43f3f174c5c50490ecb8f89c763bd49752ceabf416a772c1
+    name: wanchart
+    type: application
+    urls:
+    - https://josevirseda.github.io/Helm/wanchart-0.1.0.tgz
+    version: 0.1.0
+generated: "2022-05-19T15:01:29.896013712+02:00"

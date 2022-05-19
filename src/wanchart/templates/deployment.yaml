@@ -1,28 +1,28 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ include "wan.fullname" . }}
+  name: {{ include "wanchart.fullname" . }}
   labels:
-    {{- include "wan.labels" . | nindent 4 }}
+    {{- include "wanchart.labels" . | nindent 4 }}
 spec:
   {{- if not .Values.autoscaling.enabled }}
   replicas: {{ .Values.replicaCount }}
   {{- end }}
   selector:
     matchLabels:
-      {{- include "wan.selectorLabels" . | nindent 6 }}
+      {{- include "wanchart.selectorLabels" . | nindent 6 }}
   template:
     metadata:
       annotations:
-        k8s.v1.cni.cncf.io/networks: wannet,bridgeosm
+        k8s.v1.cni.cncf.io/networks: mplswan,bridgeosm
       labels:
-        {{- include "wan.selectorLabels" . | nindent 8 }}
+        {{- include "wanchart.selectorLabels" . | nindent 8 }}
     spec:
       {{- with .Values.imagePullSecrets }}
       imagePullSecrets:
         {{- toYaml . | nindent 8 }}
       {{- end }}
-      serviceAccountName: {{ include "wan.serviceAccountName" . }}
+      serviceAccountName: {{ include "wanchart.serviceAccountName" . }}
       securityContext:
         {{- toYaml .Values.podSecurityContext | nindent 8 }}
       containers:
@@ -32,8 +32,20 @@ spec:
               add: ["NET_ADMIN"]
             privileged: true
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
-          command: ["sh", "-c", "ip address add 10.255.0.1/24 dev net1; tail -f /dev/null"]
+          command:  ["/bin/sleep", "3650d"]
           imagePullPolicy: {{ .Values.image.pullPolicy }}
+          ports:
+            - name: http
+              containerPort: 80
+              protocol: TCP
+          livenessProbe:
+            httpGet:
+              path: /
+              port: http
+          readinessProbe:
+            httpGet:
+              path: /
+              port: http
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
       {{- with .Values.nodeSelector }}

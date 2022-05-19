@@ -1,9 +1,9 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: {{ include "wan.fullname" . }}
+  name: {{ include "cpechart.fullname" . }}
   labels:
-    {{- include "wan.labels" . | nindent 4 }}
+    {{- include "cpechart.labels" . | nindent 4 }}
 spec:
   type: {{ .Values.service.type }}
   ports:
@@ -12,4 +12,4 @@ spec:
       protocol: TCP
       name: http
   selector:
-    {{- include "wan.selectorLabels" . | nindent 4 }}
+    {{- include "cpechart.selectorLabels" . | nindent 4 }}

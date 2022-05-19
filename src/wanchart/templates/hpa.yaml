@@ -2,14 +2,14 @@
 apiVersion: autoscaling/v2beta1
 kind: HorizontalPodAutoscaler
 metadata:
-  name: {{ include "wan.fullname" . }}
+  name: {{ include "wanchart.fullname" . }}
   labels:
-    {{- include "wan.labels" . | nindent 4 }}
+    {{- include "wanchart.labels" . | nindent 4 }}
 spec:
   scaleTargetRef:
     apiVersion: apps/v1
     kind: Deployment
-    name: {{ include "wan.fullname" . }}
+    name: {{ include "wanchart.fullname" . }}
   minReplicas: {{ .Values.autoscaling.minReplicas }}
   maxReplicas: {{ .Values.autoscaling.maxReplicas }}
   metrics:
