@@ -14,7 +14,7 @@ spec:
   template:
     metadata:
       annotations:
-        k8s.v1.cni.cncf.io/networks: extnet1,bridgeosm
+        k8s.v1.cni.cncf.io/networks: extnet1,macvlan
       labels:
         {{- include "extnet.selectorLabels" . | nindent 8 }}
     spec:
