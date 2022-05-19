@@ -1,28 +1,28 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ include "ejemploubuntu.fullname" . }}
+  name: {{ include "wan.fullname" . }}
   labels:
-    {{- include "ejemploubuntu.labels" . | nindent 4 }}
+    {{- include "wan.labels" . | nindent 4 }}
 spec:
   {{- if not .Values.autoscaling.enabled }}
   replicas: {{ .Values.replicaCount }}
   {{- end }}
   selector:
     matchLabels:
-      {{- include "ejemploubuntu.selectorLabels" . | nindent 6 }}
+      {{- include "wan.selectorLabels" . | nindent 6 }}
   template:
     metadata:
       annotations:
-        k8s.v1.cni.cncf.io/networks: accessnet1,bridgeosm
+        k8s.v1.cni.cncf.io/networks: wannet,bridgeosm
       labels:
-        {{- include "ejemploubuntu.selectorLabels" . | nindent 8 }}
+        {{- include "wan.selectorLabels" . | nindent 8 }}
     spec:
       {{- with .Values.imagePullSecrets }}
       imagePullSecrets:
         {{- toYaml . | nindent 8 }}
       {{- end }}
-      serviceAccountName: {{ include "ejemploubuntu.serviceAccountName" . }}
+      serviceAccountName: {{ include "wan.serviceAccountName" . }}
       securityContext:
         {{- toYaml .Values.podSecurityContext | nindent 8 }}
       containers:
@@ -32,8 +32,8 @@ spec:
               add: ["NET_ADMIN"]
             privileged: true
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
-          imagePullPolicy: {{ .Values.image.pullPolicy }}
           command: ["sh", "-c", "ip address add 10.255.0.1/24 dev net1; tail -f /dev/null"]
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
       {{- with .Values.nodeSelector }}
