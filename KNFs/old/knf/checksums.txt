@@ -1,1 +1,0 @@
-b7ee287fb8f9f922b4289d1bbc09a9c8	knf/knf-vnfd.yaml

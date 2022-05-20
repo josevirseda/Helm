@@ -1,1 +1,0 @@
-723ebbd829149a11c620ecda0ebce7aa	fb_magma_knf/fb_magma_vnfd.yaml
