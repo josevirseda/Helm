@@ -1,0 +1,19 @@
+vnfd:
+  description: KNF with KDU using a helm-chart for Facebook magma orc8r
+  df:
+  - id: default-df
+  ext-cpd:
+  - id: mgmt-ext
+    k8s-cluster-net: mgmtnet
+  id: knf
+  k8s-cluster:
+    nets:
+    - id: mgmtnet
+  kdu:
+  - name: orc8r
+    helm-chart: repositorio2/extnet
+  mgmt-cp: mgmt-ext
+  product-name: knf
+  provider: ATOS
+  version: '1.0'
+
