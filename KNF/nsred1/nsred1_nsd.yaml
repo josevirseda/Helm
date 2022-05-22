@@ -1,22 +1,41 @@
 nsd:
   nsd:
-  - description: NS consisting of 3 KNFs
-    designer: GUI
-    df:
-    - id: default-df
-      vnf-profile:
-      - id: repos
-        virtual-link-connectivity:
-        - constituent-cpd-id:
-          - constituent-base-element-id: repos
-            constituent-cpd-id: mgmt-ext
-          virtual-link-profile-id: mgmtnet
-        vnfd-id: accessknf
-    id: nsred1
-    name: nsred1
-    version: '1.0'
-    virtual-link-desc:
-    - id: mgmtnet
-      mgmt-network: true
-    vnfd-id:
-    - accessknf
+    - description: NS consisting of 3 KNFs
+      designer: GUI
+      df:
+        - id: default-df
+          vnf-profile:
+            - id: repos
+              virtual-link-connectivity:
+                - constituent-cpd-id:
+                    - constituent-base-element-id: repos
+                      constituent-cpd-id: mgmt-ext
+                  virtual-link-profile-id: mgmtnet
+              vnfd-id: accessknf
+            - id: ns_vnfd_SLnO
+              virtual-link-connectivity:
+                - constituent-cpd-id:
+                    - constituent-base-element-id: ns_vnfd_SLnO
+                      constituent-cpd-id: mgmt-ext
+                  virtual-link-profile-id: mgmtnet
+              vnfd-id: cpeknf
+            - id: ns_vnfd_dWLV
+              virtual-link-connectivity:
+                - constituent-cpd-id:
+                    - constituent-base-element-id: ns_vnfd_dWLV
+                      constituent-cpd-id: mgmt-ext
+                  virtual-link-profile-id: mgmtnet
+              vnfd-id: wanknf
+      id: nsred1
+      name: nsred1
+      nsdOnboardingState: ONBOARDED
+      nsdOperationalState: ENABLED
+      nsdUsageState: NOT_IN_USE
+      version: '1.0'
+      virtual-link-desc:
+        - id: mgmtnet
+          mgmt-network: true
+      vnfd-id:
+        - accessknf
+        - cpeknf
+        - wanknf
