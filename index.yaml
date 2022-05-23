@@ -3,9 +3,9 @@ entries:
   access2chart:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-05-22T19:17:20.794141335+02:00"
+    created: "2022-05-23T17:49:13.500797393+02:00"
     description: A Helm chart for Kubernetes
-    digest: 325cda48699255a3ad1f1a9acf6ebb75ccc6d4b5e7bcc1d9bab46c7704cabeb2
+    digest: 5abbfd1d85b23befbee9225299667f46a50f241ee3169cc26cd69ac417363d41
     name: access2chart
     type: application
     urls:
@@ -14,7 +14,7 @@ entries:
   accesschart:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-05-22T19:17:20.794707193+02:00"
+    created: "2022-05-23T17:49:13.501424512+02:00"
     description: A Helm chart for Kubernetes
     digest: db4a039bfb5f2faa1e8ee21d47714247d09bdd149452161aa67a2cc58ae661b4
     name: accesschart
@@ -25,9 +25,9 @@ entries:
   cpe2chart:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-05-22T19:17:20.795117135+02:00"
+    created: "2022-05-23T17:49:13.502096763+02:00"
     description: A Helm chart for Kubernetes
-    digest: e5483e1e965fda8f8044c9fa84467c41c34c6c510ad177f0e938ae69503668cd
+    digest: 98a0c64de1247673c83149bac3b3563a01d9a4d4abaf3bacbeb219b0e72c888f
     name: cpe2chart
     type: application
     urls:
@@ -36,7 +36,7 @@ entries:
   cpechart:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-05-22T19:17:20.795676946+02:00"
+    created: "2022-05-23T17:49:13.502915242+02:00"
     description: A Helm chart for Kubernetes
     digest: 9df361c7ac900caff91dfbe86d6e8fde8da3811cf4b24f66d986b3b1111a50c6
     name: cpechart
@@ -47,9 +47,9 @@ entries:
   wan2chart:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-05-22T19:17:20.796092954+02:00"
+    created: "2022-05-23T17:49:13.503645633+02:00"
     description: A Helm chart for Kubernetes
-    digest: 831a253a87355f79376ceccac80687b5d9671985b5a0f0f81847e9db47c0a6ff
+    digest: b1e48e52d178d79e46f7bf3160b48134dec707049bf2d27e89f34eb0a4edd27b
     name: wan2chart
     type: application
     urls:
@@ -58,7 +58,7 @@ entries:
   wanchart:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-05-22T19:17:20.796795215+02:00"
+    created: "2022-05-23T17:49:13.504400329+02:00"
     description: A Helm chart for Kubernetes
     digest: 2474724660fba8c7f2127ae6648dfefc6fcad32065bbeea065cc77d74514d797
     name: wanchart
@@ -66,4 +66,4 @@ entries:
     urls:
     - https://josevirseda.github.io/Helm/wanchart-0.1.0.tgz
     version: 0.1.0
-generated: "2022-05-22T19:17:20.793448155+02:00"
+generated: "2022-05-23T17:49:13.499960413+02:00"
