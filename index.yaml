@@ -1,20 +1,20 @@
 apiVersion: v1
 entries:
-  access2chart:
+  2accesschart:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-05-24T10:04:35.744315207+02:00"
+    created: "2022-05-24T10:37:47.581373269+02:00"
     description: A Helm chart for Kubernetes
-    digest: 5abbfd1d85b23befbee9225299667f46a50f241ee3169cc26cd69ac417363d41
-    name: access2chart
+    digest: 762b115776bafd11f22f45600d783f855fc47fda2d151e586cd23c5793745aa7
+    name: 2accesschart
     type: application
     urls:
-    - https://josevirseda.github.io/Helm/access2chart-0.1.0.tgz
+    - https://josevirseda.github.io/Helm/2accesschart-0.1.0.tgz
     version: 0.1.0
   accesschart:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-05-24T10:04:35.745877744+02:00"
+    created: "2022-05-24T10:37:47.582400842+02:00"
     description: A Helm chart for Kubernetes
     digest: db4a039bfb5f2faa1e8ee21d47714247d09bdd149452161aa67a2cc58ae661b4
     name: accesschart
@@ -22,21 +22,10 @@ entries:
     urls:
     - https://josevirseda.github.io/Helm/accesschart-0.1.0.tgz
     version: 0.1.0
-  cpe2chart:
-  - apiVersion: v2
-    appVersion: 1.16.0
-    created: "2022-05-24T10:04:35.747032505+02:00"
-    description: A Helm chart for Kubernetes
-    digest: 9f61ab3ae66b62f8eb35780839082324f19685ac1688e73268d4555c576c7d28
-    name: cpe2chart
-    type: application
-    urls:
-    - https://josevirseda.github.io/Helm/cpe2chart-0.1.0.tgz
-    version: 0.1.0
   cpechart:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-05-24T10:04:35.748163273+02:00"
+    created: "2022-05-24T10:37:47.583428307+02:00"
     description: A Helm chart for Kubernetes
     digest: 9df361c7ac900caff91dfbe86d6e8fde8da3811cf4b24f66d986b3b1111a50c6
     name: cpechart
@@ -44,21 +33,10 @@ entries:
     urls:
     - https://josevirseda.github.io/Helm/cpechart-0.1.0.tgz
     version: 0.1.0
-  wan2chart:
-  - apiVersion: v2
-    appVersion: 1.16.0
-    created: "2022-05-24T10:04:35.749166254+02:00"
-    description: A Helm chart for Kubernetes
-    digest: 662d060f03264a1bc2336858572f14a11b3981a4cf047fb2a8a256a099db6969
-    name: wan2chart
-    type: application
-    urls:
-    - https://josevirseda.github.io/Helm/wan2chart-0.1.0.tgz
-    version: 0.1.0
   wanchart:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-05-24T10:04:35.750266935+02:00"
+    created: "2022-05-24T10:37:47.584442478+02:00"
     description: A Helm chart for Kubernetes
     digest: 2474724660fba8c7f2127ae6648dfefc6fcad32065bbeea065cc77d74514d797
     name: wanchart
@@ -66,4 +44,4 @@ entries:
     urls:
     - https://josevirseda.github.io/Helm/wanchart-0.1.0.tgz
     version: 0.1.0
-generated: "2022-05-24T10:04:35.742552916+02:00"
+generated: "2022-05-24T10:37:47.573793541+02:00"

@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: "{{ include "2accesschart.fullname" . }}-test-connection"
+  labels:
+    {{- include "2accesschart.labels" . | nindent 4 }}
+  annotations:
+    "helm.sh/hook": test
+spec:
+  containers:
+    - name: wget
+      image: busybox
+      command: ['wget']
+      args: ['{{ include "2accesschart.fullname" . }}:{{ .Values.service.port }}']
+  restartPolicy: Never
