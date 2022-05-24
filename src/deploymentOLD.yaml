@@ -15,7 +15,7 @@ spec:
     metadata:
       {{- with .Values.podAnnotations }}
       annotations:
-        k8s.v1.cni.cncf.io/networks: accessnet1
+        k8s.v1.cni.cncf.io/networks: accessnet2,bridgeosm2
       {{- end }}
       labels:
         {{- include "ejemploubuntu.selectorLabels" . | nindent 8 }}
