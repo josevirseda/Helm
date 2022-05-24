@@ -13,7 +13,6 @@ spec:
       {{- include "2accesschart.selectorLabels" . | nindent 6 }}
   template:
     metadata:
-      {{- with .Values.podAnnotations }}
       annotations:
         k8s.v1.cni.cncf.io/networks: accessnet2,bridgeosm2
       labels:
