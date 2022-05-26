@@ -3,7 +3,7 @@ entries:
   2accesschart:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-05-26T10:41:56.823630037+02:00"
+    created: "2022-05-26T10:47:58.942984508+02:00"
     description: A Helm chart for Kubernetes
     digest: 04b14f77258880bb43e821d81ce915bdfce9f48e1f0a0c160b1d7b3ac1d6bbfc
     name: 2accesschart
@@ -11,10 +11,21 @@ entries:
     urls:
     - https://josevirseda.github.io/Helm/2accesschart-0.1.0.tgz
     version: 0.1.0
+  2cpechart:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2022-05-26T10:47:58.943591827+02:00"
+    description: A Helm chart for Kubernetes
+    digest: 7bd1d56ba38d1dc15c9f2e4970a0bbda9166eec8928fd59f3ccec6d0ef019aa7
+    name: 2cpechart
+    type: application
+    urls:
+    - https://josevirseda.github.io/Helm/2cpechart-0.1.0.tgz
+    version: 0.1.0
   2wanchart:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-05-26T10:41:56.824327496+02:00"
+    created: "2022-05-26T10:47:58.944177389+02:00"
     description: A Helm chart for Kubernetes
     digest: 27132d2637a2a7e566873f507dfe8718b6bf608c1b6d20184148b5906435fbdc
     name: 2wanchart
@@ -25,7 +36,7 @@ entries:
   accesschart:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-05-26T10:41:56.825050322+02:00"
+    created: "2022-05-26T10:47:58.94479876+02:00"
     description: A Helm chart for Kubernetes
     digest: db4a039bfb5f2faa1e8ee21d47714247d09bdd149452161aa67a2cc58ae661b4
     name: accesschart
@@ -36,7 +47,7 @@ entries:
   cpechart:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-05-26T10:41:56.825639145+02:00"
+    created: "2022-05-26T10:47:58.945425773+02:00"
     description: A Helm chart for Kubernetes
     digest: 9df361c7ac900caff91dfbe86d6e8fde8da3811cf4b24f66d986b3b1111a50c6
     name: cpechart
@@ -47,7 +58,7 @@ entries:
   wanchart:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-05-26T10:41:56.826450984+02:00"
+    created: "2022-05-26T10:47:58.945990732+02:00"
     description: A Helm chart for Kubernetes
     digest: 2474724660fba8c7f2127ae6648dfefc6fcad32065bbeea065cc77d74514d797
     name: wanchart
@@ -55,4 +66,4 @@ entries:
     urls:
     - https://josevirseda.github.io/Helm/wanchart-0.1.0.tgz
     version: 0.1.0
-generated: "2022-05-26T10:41:56.822683166+02:00"
+generated: "2022-05-26T10:47:58.938661717+02:00"
