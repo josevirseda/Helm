@@ -14,7 +14,7 @@ spec:
   template:
     metadata:
       annotations:
-        k8s.v1.cni.cncf.io/networks: mplswan,bridgeosm2
+        k8s.v1.cni.cncf.io/networks: mplswan,bridgeosm
       labels:
         {{- include "wanchart.selectorLabels" . | nindent 8 }}
     spec:
