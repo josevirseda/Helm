@@ -1,5 +1,9 @@
 # Configuration guide
 
+Example creating vxlan tunnel:
+
+        ovs-vsctl add-port brint axscpe -- set interface axscpe options:remote_ip=192.168.100.2 options:dst_port=8742 options:key=inet
+        
 ## ACCESS KNF
 bridges:
 
