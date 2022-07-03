@@ -109,6 +109,17 @@ bridges:
 routes:
 
     192.168.100.0/24 dev net2 proto kernel scope link src 192.168.100.3 
+controller set-up:
+
+        OVS_DPID="0000000000000001"
+
+        ryu-manager --verbose flowmanager/flowmanager.py ryu.app.ofctl_rest 2>&1 | tee ryu.log &
+
+        service openvswitch-switch start
+        ovs-vsctl add-br brwan
+        ovs-vsctl set bridge brwan protocols=OpenFlow10,OpenFlow12,OpenFlow13
+        ovs-vsctl set-fail-mode brwan secure
+        ovs-vsctl set bridge brwan other-config:datapath-id=$OVS_DPID
 
 flows:
 
