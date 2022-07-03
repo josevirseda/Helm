@@ -195,7 +195,7 @@ bridges:
         Port cpewan
             Interface cpewan
                 type: vxlan
-                options: {dst_port="8741", key=sdwn, remote_ip="192.168.100.2"}
+                options: {dst_port="8741", key=sdwn, remote_ip="192.168.200.2"}
         Port net1
             Interface net1
     ovs_version: "2.13.5"
