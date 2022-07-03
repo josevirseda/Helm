@@ -1,4 +1,4 @@
-# Helm Chart repository for OSM
+# Configuration guide
 
 ## ACCESS KNF
 bridges:
