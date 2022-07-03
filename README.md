@@ -159,7 +159,8 @@ routes:
 ## CPE KNF 2
 
 neccessary packages:
-    apt-get install iptables
+
+    apt-get install iptables    
     
 bridges:
 
