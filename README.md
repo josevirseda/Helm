@@ -5,7 +5,8 @@ Example creating vxlan tunnel:
         ovs-vsctl add-port brint axscpe -- set interface axscpe options:remote_ip=192.168.100.2 options:dst_port=8742 options:key=inet
         
 ## ACCESS KNF
-bridges:
+
+**Bridges:**
 
     Bridge brint
         Port axscpe
@@ -33,7 +34,7 @@ bridges:
                 options: {remote_ip="192.168.100.3"}
     ovs_version: "2.13.5"
     
-routes:
+**Routes:**
 
 
     10.255.0.0/24 dev net1 proto kernel scope link src 10.255.0.1 
@@ -42,11 +43,11 @@ routes:
 
 ## CPE KNF
 
-neccessary packages:
+**Necessary packages:**
 
     apt-get install iptables    
     
-bridges:
+**Bridges:**
 
     Bridge brwan
         Port vxlan1
@@ -70,7 +71,7 @@ bridges:
                 type: internal
     ovs_version: "2.13.5"
 
-routes:
+**Routes:**
 
     default via 10.100.1.254 dev net1 
     10.20.1.0/24 via 192.168.255.253 dev brint 
@@ -85,7 +86,7 @@ neccessary packages:
     apt-get install ryu-bin
     flowmanager
     
-bridges:
+**Bridges:**
 
     Bridge brwan
         Controller "tcp:127.0.0.1:6633"
@@ -106,7 +107,7 @@ bridges:
             Interface net1
     ovs_version: "2.13.5"
 
-routes:
+**Routes:**
 
     192.168.100.0/24 dev net2 proto kernel scope link src 192.168.100.3 
 controller set-up:
@@ -121,7 +122,7 @@ controller set-up:
         ovs-vsctl set-fail-mode brwan secure
         ovs-vsctl set bridge brwan other-config:datapath-id=$OVS_DPID
 
-flows:
+**flows:**
 
     cookie=0x3151b, duration=18.058s, table=0, n_packets=0, n_bytes=0, priority=45002,ip,in_port=axswan,nw_dst=10.20.2.192/26 actions=output:net1
     cookie=0x3151b, duration=11.462s, table=0, n_packets=0, n_bytes=0, priority=45002,ip,in_port=axswan,nw_dst=10.20.2.192/26 actions=output:cpewan
@@ -134,7 +135,7 @@ flows:
 
 ## ACCESS KNF 2
 
-bridges:
+**Bridges:**
 
     Bridge brwan
         Port vxlan1
@@ -162,18 +163,18 @@ bridges:
                 type: internal
     ovs_version: "2.13.5"
 
-routes:
+**Routes:**
 
     10.255.0.0/24 dev net1 proto kernel scope link src 10.255.0.1 
     192.168.200.0/24 dev net2 proto kernel scope link src 192.168.200.1 
 
 ## CPE KNF 2
 
-neccessary packages:
+**Necessary packages:**
 
     apt-get install iptables    
     
-bridges:
+**Bridges:**
 
     Bridge brwan
         Port brwan
@@ -196,7 +197,7 @@ bridges:
                 type: vxlan
                 options: {dst_port="8742", key=inet, remote_ip="192.168.200.1"}
 
-routes:
+**Routes:**
 
     default via 10.100.2.254 dev net1 
     10.20.2.0/24 via 192.168.255.253 dev brint 
@@ -205,7 +206,8 @@ routes:
     192.168.255.0/24 dev brint proto kernel scope link src 192.168.255.254 
 
 ## WAN KNF 2
-bridges:
+
+**Bridges:**
 
     Bridge brwan
         Controller "tcp:127.0.0.1:6633"
@@ -224,7 +226,7 @@ bridges:
         Port net1
             Interface net1
     ovs_version: "2.13.5"
-
-routes:
+    
+**Routes:**
 
     192.168.200.0/24 dev net2 proto kernel scope link src 192.168.200.3 
