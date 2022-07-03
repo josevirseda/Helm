@@ -43,7 +43,8 @@ routes:
 ## CPE KNF
 
 neccessary packages:
-    apt-get install iptables
+
+    apt-get install iptables    
     
 bridges:
 
@@ -80,7 +81,9 @@ routes:
 ## WAN KNF
 
 neccessary packages:
+
     apt-get install ryu-bin
+    flowmanager
     
 bridges:
 
