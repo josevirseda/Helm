@@ -42,6 +42,9 @@ routes:
 
 ## CPE KNF
 
+neccessary packages:
+    apt-get install iptables
+    
 bridges:
 
     Bridge brwan
@@ -76,6 +79,9 @@ routes:
 
 ## WAN KNF
 
+neccessary packages:
+    apt-get install ryu-bin
+    
 bridges:
 
     Bridge brwan
@@ -149,6 +155,9 @@ routes:
 
 ## CPE KNF 2
 
+neccessary packages:
+    apt-get install iptables
+    
 bridges:
 
     Bridge brwan
