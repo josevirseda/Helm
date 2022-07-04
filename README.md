@@ -191,6 +191,10 @@ neccessary packages:
     ovs-vsctl set bridge brwan protocols=OpenFlow10,OpenFlow12,OpenFlow13
     ovs-vsctl set-fail-mode brwan secure
     ovs-vsctl set bridge brwan other-config:datapath-id=$OVS_DPID
+    
+    CONTROLLER_IP="127.0.0.1"
+    CONTROLLER="tcp:$CONTROLLER_IP:6633"
+    ovs-vsctl set-controller brwan $CONTROLLER
 
 **flows:**
 
@@ -325,6 +329,24 @@ neccessary packages:
 **Routes:**
 
     192.168.200.0/24 dev net2 proto kernel scope link src 192.168.200.3 
+        
+**controller set-up:**
+
+    OVS_DPID="0000000000000002"
+
+    ryu-manager --verbose flowmanager/flowmanager.py ryu.app.ofctl_rest 2>&1 | tee ryu.log &
+
+    service openvswitch-switch start
+    ovs-vsctl add-br brwan
+    ovs-vsctl set bridge brwan protocols=OpenFlow10,OpenFlow12,OpenFlow13
+    ovs-vsctl set-fail-mode brwan secure
+    ovs-vsctl set bridge brwan other-config:datapath-id=$OVS_DPID
+    
+        
+    CONTROLLER_IP="127.0.0.1"
+    CONTROLLER="tcp:$CONTROLLER_IP:6633"
+    ovs-vsctl set-controller brwan $CONTROLLER
+    
 **flows:**
 
     wanknf@: ovs-vsctl -- --columns=name,ofport list Interface
