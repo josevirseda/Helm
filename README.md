@@ -54,7 +54,19 @@
 
 See network attachment definition folder
 
+Upload osm packages and instantiate ns in OSM web page:
 
+    cd KNF
+
+    osm vnfd-create accessknf
+    osm vnfd-create accessknf2
+    osm vnfd-create cpeknf
+    osm vnfd-create cpeknf2
+    osm vnfd-create wanknf
+    osm vnfd-create wanknf2
+
+    osm nsd-create nsred1
+    osm nsd-create nsred2
 
 
 ## ACCESS KNF
