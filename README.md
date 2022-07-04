@@ -2,9 +2,9 @@
 
 ## Set-up VNX upm enviroment
 
-cd vnx
-./init.sh
-vnx -f vnx/sdedge_nfv.xml -t
+    cd vnx
+    ./init.sh
+    vnx -f vnx/sdedge_nfv.xml -t
 
    
 ## ACCESS KNF
