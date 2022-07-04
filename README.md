@@ -137,7 +137,8 @@ neccessary packages:
 
      name                : axswan
      ofport              : 1
-
+  
+  JSON to apply:
 
     {"dpid": 1, "priority": 45001, "cookie": 202003, "match": {  "in_port": 1, "dl_dst": "00:00:00:00:00:20"}, "actions": [{"type":"OUTPUT", "port":2}]}
     {"dpid": 1, "priority": 45001, "cookie": 202002, "match": {  "in_port": 2, "dl_src": "00:00:00:00:00:20"}, "actions": [{"type":"OUTPUT", "port":1}]}
