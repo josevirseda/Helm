@@ -6,6 +6,50 @@
     ./init.sh
     vnx -f vnx/sdedge_nfv.xml -t
 
+  You will see:
+    
+    Bridge MplsWan
+        Port "voip-gw-e1"
+            Interface "voip-gw-e1"
+        Port MplsWan
+            Interface MplsWan
+                type: internal
+    Bridge "ExtNet1"
+        Port "ExtNet1"
+            Interface "ExtNet1"
+                type: internal       
+        Port "isp1-e1"
+            Interface "isp1-e1"
+    Bridge Internet
+        Port Internet
+            Interface Internet
+                type: internal
+        Port "s1-e1"
+            Interface "s1-e1"
+        Port "isp2-e2"
+            Interface "isp2-e2"
+        Port "isp1-e2"
+            Interface "isp1-e2"
+    Bridge "AccessNet1"        
+        Port "AccessNet1"
+            Interface "AccessNet1"
+                type: internal
+        Port "bcg1-e3"
+            Interface "bcg1-e3"
+    Bridge "ExtNet2"
+        Port "isp2-e1"
+            Interface "isp2-e1"        
+        Port "ExtNet2"
+            Interface "ExtNet2"
+                type: internal
+    Bridge "AccessNet2"       
+        Port "AccessNet2"
+            Interface "AccessNet2"
+                type: internal
+        Port "bcg2-e3"
+            Interface "bcg2-e3"
+    ovs_version: "2.9.8"
+
    
 ## ACCESS KNF
 
