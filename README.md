@@ -50,7 +50,13 @@
             Interface "bcg2-e3"
     ovs_version: "2.9.8"
 
-   
+## Network attachment definitions and upload OSM packages
+
+See network attachment definition folder
+
+
+
+
 ## ACCESS KNF
 
 Example creating vxlan tunnel:
