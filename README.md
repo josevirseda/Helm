@@ -1,11 +1,18 @@
 # Configuration guide
 
+## Set-up VNX upm enviroment
+
+cd vnx
+./init.sh
+vnx -f vnx/sdedge_nfv.xml -t
+
+   
+## ACCESS KNF
+
 Example creating vxlan tunnel:
 
         ovs-vsctl add-port brint axscpe -- set interface axscpe options:remote_ip=192.168.100.2 options:dst_port=8742 options:key=inet
-        
-## ACCESS KNF
-
+     
 **Bridges:**
 
     Bridge brint
