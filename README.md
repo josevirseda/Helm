@@ -1,5 +1,7 @@
 # Configuration guide
 
+![Screenshot](screenshot.png)
+
 ## Set-up VNX upm enviroment
 
     cd vnx
