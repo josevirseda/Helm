@@ -109,8 +109,9 @@ neccessary packages:
 
 **Routes:**
 
-    192.168.100.0/24 dev net2 proto kernel scope link src 192.168.100.3 
-controller set-up:
+    192.168.100.0/24 dev net2 proto kernel scope link src 192.168.100.3
+    
+**controller set-up:**
 
     OVS_DPID="0000000000000001"
 
