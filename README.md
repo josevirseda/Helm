@@ -125,7 +125,7 @@ neccessary packages:
 
 **flows:**
 
-    ovs-vsctl -- --columns=name,ofport list Interface
+    wanknf@: ovs-vsctl -- --columns=name,ofport list Interface
      name                : cpewan
      ofport              : 3
 
@@ -146,6 +146,9 @@ neccessary packages:
     {"dpid": 1, "priority": 40000, "cookie": 1, "match": {"in_port": 1}, "actions": [{"type":"OUTPUT", "port":3}]}
     {"dpid": 1, "priority": 45002, "cookie": 202011, "match": {  "in_port": 1, "ipv4_dst": "10.20.2.192/26", "eth_type": 2048}, "actions": [{"type":"OUTPUT", "port":2}]}
 
+
+    wanknf@: ovs-ofctl dump-flows brwan
+    
     cookie=0x3151b, duration=983.405s, table=0, n_packets=53, n_bytes=5194, priority=45002,ip,in_port=axswan,nw_dst=10.20.2.192/26 actions=output:net1
     cookie=0x31512, duration=983.552s, table=0, n_packets=0, n_bytes=0, priority=45001,in_port=net1,dl_src=00:00:00:00:00:20 actions=output:axswan
     cookie=0x31511, duration=983.651s, table=0, n_packets=13, n_bytes=546, priority=45000,in_port=axswan,dl_dst=ff:ff:ff:ff:ff:ff actions=FLOOD
