@@ -325,3 +325,26 @@ neccessary packages:
 **Routes:**
 
     192.168.200.0/24 dev net2 proto kernel scope link src 192.168.200.3 
+**flows:**
+
+    wanknf@: ovs-vsctl -- --columns=name,ofport list Interface
+     name                : cpewan
+     ofport              : 2
+
+     name                : brwan
+     ofport              : 65534
+
+     name                : net1
+     ofport              : 3
+
+     name                : axswan
+     ofport              : 1
+  
+  JSON to apply:
+
+    {"dpid": 1, "priority": 45001, "cookie": 202003, "match": {  "in_port": 1, "dl_dst": "00:00:00:00:00:20"}, "actions": [{"type":"OUTPUT", "port":3}]}
+    {"dpid": 1, "priority": 45001, "cookie": 202002, "match": {  "in_port": 3, "dl_src": "00:00:00:00:00:20"}, "actions": [{"type":"OUTPUT", "port":1}]}
+    {"dpid": 1, "priority": 45000, "cookie": 202001, "match": {  "in_port": 1, "dl_dst": "ff:ff:ff:ff:ff:ff"}, "actions": [{"type":"OUTPUT", "port":"FLOOD"}]}
+    {"dpid": 1, "priority": 40000, "cookie": 2, "match": {"in_port": 2}, "actions": [{"type":"OUTPUT", "port":1}]}
+    {"dpid": 1, "priority": 40000, "cookie": 1, "match": {"in_port": 1}, "actions": [{"type":"OUTPUT", "port":2}]}
+    {"dpid": 1, "priority": 45002, "cookie": 202011, "match": {  "in_port": 1, "ipv4_dst": "10.20.2.192/26", "eth_type": 2048}, "actions": [{"type":"OUTPUT", "port":3}]}
