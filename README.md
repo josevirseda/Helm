@@ -147,7 +147,8 @@ neccessary packages:
     {"dpid": 1, "priority": 40000, "cookie": 1, "match": {"in_port": 1}, "actions": [{"type":"OUTPUT", "port":3}]}
     {"dpid": 1, "priority": 45002, "cookie": 202011, "match": {  "in_port": 1, "ipv4_dst": "10.20.2.192/26", "eth_type": 2048}, "actions": [{"type":"OUTPUT", "port":2}]}
 
-
+   Result:
+  
     wanknf@: ovs-ofctl dump-flows brwan
     
     cookie=0x3151b, duration=983.405s, table=0, n_packets=53, n_bytes=5194, priority=45002,ip,in_port=axswan,nw_dst=10.20.2.192/26 actions=output:net1
