@@ -1,6 +1,6 @@
 # Configuration guide
 
-![Screenshot](screenshot.png)
+![Screenshot](screenshot2.png)
 
 ## Set-up VNX upm enviroment
 
