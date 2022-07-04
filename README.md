@@ -125,8 +125,7 @@ controller set-up:
 **flows:**
 
     cookie=0x3151b, duration=18.058s, table=0, n_packets=0, n_bytes=0, priority=45002,ip,in_port=axswan,nw_dst=10.20.2.192/26 actions=output:net1
-    cookie=0x3151b, duration=11.462s, table=0, n_packets=0, n_bytes=0, priority=45002,ip,in_port=axswan,nw_dst=10.20.2.192/26 actions=output:cpewan
-    cookie=0x31512, duration=18.197s, table=0, n_packets=0, n_bytes=0, priority=45001,in_port=cpewan,dl_src=00:00:00:00:00:20 actions=output:axswan
+    cookie=0x31512, duration=18.197s, table=0, n_packets=0, n_bytes=0, priority=45001,in_port=net1,dl_src=00:00:00:00:00:20 actions=output:axswan
     cookie=0x31511, duration=18.273s, table=0, n_packets=0, n_bytes=0, priority=45000,in_port=axswan,dl_dst=ff:ff:ff:ff:ff:ff actions=FLOOD
     cookie=0x31513, duration=18.127s, table=0, n_packets=0, n_bytes=0, priority=45001,in_port=axswan,dl_dst=00:00:00:00:00:20 actions=output:net1
     cookie=0x1, duration=18.412s, table=0, n_packets=0, n_bytes=0, priority=40000,in_port=cpewan actions=output:net1
