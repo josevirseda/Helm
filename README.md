@@ -347,4 +347,4 @@ neccessary packages:
     {"dpid": 1, "priority": 45000, "cookie": 202001, "match": {  "in_port": 1, "dl_dst": "ff:ff:ff:ff:ff:ff"}, "actions": [{"type":"OUTPUT", "port":"FLOOD"}]}
     {"dpid": 1, "priority": 40000, "cookie": 2, "match": {"in_port": 2}, "actions": [{"type":"OUTPUT", "port":1}]}
     {"dpid": 1, "priority": 40000, "cookie": 1, "match": {"in_port": 1}, "actions": [{"type":"OUTPUT", "port":2}]}
-    {"dpid": 1, "priority": 45002, "cookie": 202011, "match": {  "in_port": 1, "ipv4_dst": "10.20.2.192/26", "eth_type": 2048}, "actions": [{"type":"OUTPUT", "port":3}]}
+    {"dpid": 1, "priority": 45002, "cookie": 202011, "match": {  "in_port": 1, "ipv4_dst": "10.20.1.192/26", "eth_type": 2048}, "actions": [{"type":"OUTPUT", "port":3}]}
