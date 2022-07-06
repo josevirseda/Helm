@@ -54,7 +54,63 @@
 
 ## Network attachment definitions and upload OSM packages
 
-See network attachment definition folder, copy and paste the sentences.
+    sudo cat <<EOF | microk8s kubectl -n 2c8bddab056644f19a3e7d20db1770b7 create -f -
+    apiVersion: "k8s.cni.cncf.io/v1"
+    kind: NetworkAttachmentDefinition
+    metadata:
+     name: bridgeosm
+    spec:
+    config: '{
+        "cniVersion": "0.4.0",
+         "type": "bridge"
+        }'
+    EOF
+
+    sudo cat <<EOF | microk8s kubectl -n 2c8bddab056644f19a3e7d20db1770b7 create -f -
+    apiVersion: "k8s.cni.cncf.io/v1"
+    kind: NetworkAttachmentDefinition
+    metadata:
+    name: accessnet1
+    annotations:
+      k8s.v1.cni.cncf.io/resourceName: ovs-cni.network.kubevirt.io/accessnet1
+    spec:
+     config: '{
+         "cniVersion": "0.4.0",
+         "type": "ovs",
+          "bridge": "AccessNet1"
+        }'
+    EOF
+
+    sudo cat <<EOF | microk8s kubectl -n 2c8bddab056644f19a3e7d20db1770b7 create -f -
+    apiVersion: "k8s.cni.cncf.io/v1"
+    kind: NetworkAttachmentDefinition
+    metadata:
+    name: extnet1
+    annotations:
+        k8s.v1.cni.cncf.io/resourceName: ovs-cni.network.kubevirt.io/extnet1
+    spec:
+    config: '{
+        "cniVersion": "0.4.0",
+        "type": "ovs",
+        "bridge": "ExtNet1"
+        }'
+    EOF
+
+    sudo cat <<EOF | microk8s kubectl -n 2c8bddab056644f19a3e7d20db1770b7 create -f -
+    apiVersion: "k8s.cni.cncf.io/v1"
+    kind: NetworkAttachmentDefinition
+    metadata:
+    name: mplswan
+        annotations:
+        k8s.v1.cni.cncf.io/resourceName: ovs-cni.network.kubevirt.io/mplswan
+    spec:
+    config: '{
+        "cniVersion": "0.4.0",
+        "type": "ovs",
+        "bridge": "MplsWan"
+        }'
+Do the same with AccessNet2 and ExtNet2
+
 You must install ovs-cni (see https://github.com/k8snetworkplumbingwg/ovs-cni)  and add multus plugin (microk8s enable multus) before.
 
 Upload osm packages and instantiate ns in OSM web page:
