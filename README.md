@@ -54,7 +54,8 @@
 
 ## Network attachment definitions and upload OSM packages
 
-See network attachment definition folder
+See network attachment definition folder, copy and paste the sentences.
+You must install ovs-cni (see https://github.com/k8snetworkplumbingwg/ovs-cni)  and add multus plugin (microk8s enable multus) before.
 
 Upload osm packages and instantiate ns in OSM web page:
 
